@@ -1,5 +1,6 @@
 import { Swipe } from "./swipe.js";
 import { API } from "../data/config.js";
+import { SendWithEnter } from "./sendWithEnter.js";
 
 const closeChat = document.querySelector(".btn-close-chat");
 const input = document.querySelector(".input-chat");
@@ -7,7 +8,7 @@ const sendMessage = document.querySelector(".button-chat");
 
 export function Chat(Assistant) {
   sendMessage.addEventListener("click", () => SendMessage(Assistant));
-
+  SendWithEnter(input, sendMessage)
   closeChat.addEventListener("click", () => Swipe(true));
 }
 
@@ -18,6 +19,7 @@ function SendMessage(Assistant) {
   user.className = "you-message";
   user.innerHTML = `Tu: ${input.value}`;
   container.appendChild(user);
+  input.value = '';
   container.scrollTop = container.scrollHeight; //Mantiene el la barra de scroll desplazada hacia abajo
 
   const prompt = `Contexto:
