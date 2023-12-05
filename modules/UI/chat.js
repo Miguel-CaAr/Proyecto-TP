@@ -15,6 +15,9 @@ export function Chat(Assistant) {
 const container = document.querySelector(".container-response");
 
 function SendMessage(Assistant) {
+  if(container.childElementCount > 0){
+    container.remove(user);
+  }
   const user = document.createElement("p");
   user.className = "you-message";
   user.innerHTML = `Tu: ${input.value}`;
@@ -22,18 +25,17 @@ function SendMessage(Assistant) {
   container.scrollTop = container.scrollHeight; //Mantiene el la barra de scroll desplazada hacia abajo
 
   const prompt = `Olvida todo lo anterior.
+  -Por ningun motivo incluyas numeros en tu respuesta.
   Instrucciones:
   Simula ser un experto ${Assistant}, con decadas de experiencia, ofrece asesoramiento conciso en menos de 150 palabras.
   Deduce diagnosticos y da soluciones específicas, 
   recomienda la mejor estrategia y brinda posibles diagnósticos, no te inventes historias.
   La consulta es: ${input.value}"
-  -Por ningun motivo incluyas numeros en tu respuesta.
+  -NO USES NUMEROS
   -Tu respuesta debe esta putualizda.
 `;
 
   if (Assistant) {
     API(prompt);
   }
-
-  input.value = "";
 }

@@ -1,7 +1,7 @@
 import { Stream } from "./stream.js";
 import { HandleStatus } from "./handleStatus.js";
 
-const API_KEY = "API-KEY";
+const API_KEY = "api-key";
 const URL = "https://api.openai.com/v1/chat/completions";
 
 /**
