@@ -4,7 +4,10 @@
 const btnClose = document.querySelector(".btn-close");
 const backgroundModal = document.querySelector(".background");
 const containerModal = document.querySelector(".container-modal");
+<<<<<<< HEAD
 const pagina = document.querySelector(".search");
+=======
+>>>>>>> 2df492b194ddd298072d2ebc0f4c73348a85e775
 
 export function closeModal() {
   btnClose.addEventListener("click", Close);
@@ -13,6 +16,9 @@ export function closeModal() {
 
   function Close() {
     containerModal.style.display = "none";
+<<<<<<< HEAD
     pagina.style.filter = "blur(5px)";
+=======
+>>>>>>> 2df492b194ddd298072d2ebc0f4c73348a85e775
   }
 }
