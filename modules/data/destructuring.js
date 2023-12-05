@@ -1,4 +1,4 @@
-import { chooseAssistant } from "../UI/chooseAssistant.js";
+import { SuggestAssistant } from "../UI/suggestAssistant.js"
 import { Render } from "../UI/renderTest.js";
 /**
  * Desestructura el arreglo con objetos
@@ -16,7 +16,7 @@ export function Destructuring(parsedObjects) {
         case "1":
         case "2":
         case "3":
-          chooseAssistant(content);
+          SuggestAssistant(content);
           break;
         default:
           Render(content);

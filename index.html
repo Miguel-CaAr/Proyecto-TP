@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto</title>
-    <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="styles/search.css" />
+  </head>
+  <body>
     <main>
-        <h1>PROYECTO</h1>
+      <section class="search">
+        <label class="title-search"
+          >¿Desea saber que profesional necesita?</label
+        >
+        <div class="container-input">
+          <input
+            class="input-search"
+            type="text"
+            placeholder="Ingrese el tema"
+          />
+          <button class="btn-search">Buscar asesor</button>
+        </div>
+      </section>
+
+      <div class="container-modal">
+        <div class="background"></div>
+        <div class="modal">
+          <button class="btn-close">❌</button>
+          <h3>El asistente que necesita es:</h3>
+          <h1 class="name-assistant"></h1>
+          <button class="btn-consult">Asesorarse</button>
+        </div>
+      </div>
     </main>
     <footer>
-        <script src="app.js"></script>
+      <script type="module" src="app.js"></script>
+      <script type="module" src="./modules/UI/search.js"></script>
     </footer>
-</body>
+  </body>
 </html>
