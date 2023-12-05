@@ -7,11 +7,8 @@ export function SuggestAssistant(numAssistant) {
   };
   const containerModal = document.querySelector(".container-modal");
   containerModal.style.display = "flex";
-<<<<<<< HEAD
   const pagina = document.querySelector('.search');
   pagina.style.filter = "blur(5px)";
-=======
->>>>>>> 2df492b194ddd298072d2ebc0f4c73348a85e775
   const nameAssistant = document.querySelector(".name-assistant");
   nameAssistant.innerText = assistant[numAssistant];
   closeModal();
