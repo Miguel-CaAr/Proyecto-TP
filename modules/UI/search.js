@@ -11,5 +11,5 @@ export function Search() {
     1:Psicólogo
     2:Abogado
     3:Medico
-    Responde unicamente con el numero sin comillas ni nada extra`);
+    Responde unicamente con el numero sin comillas, ni dos puntos, ni la palabra de la profesion, solo el numero correspondiente y nada mas`);
 }

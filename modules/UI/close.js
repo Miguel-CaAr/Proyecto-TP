@@ -14,8 +14,9 @@ export function Close() {
   //Si se presiona asesorar
   btnConsult.addEventListener("click", CloseModal);
 
-  function CloseModal() {
-    containerModal.style.display = "none";
-    search.style.filter = "none";
-  }
+}
+
+function CloseModal() {
+  containerModal.style.display = "none";
+  search.style.filter = "none";
 }

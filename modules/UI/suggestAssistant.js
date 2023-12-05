@@ -1,5 +1,8 @@
+import { Chat } from "./chat.js";
 import { Close } from "./close.js";
 import { Swipe } from "./swipe.js";
+import { designChat } from "./designChat.js";
+
 export function SuggestAssistant(numAssistant) {
   const assistant = {
     1: "Psicologo",
@@ -15,15 +18,11 @@ export function SuggestAssistant(numAssistant) {
   const btnConsult = document.querySelector(".btn-consult");
 
   //Cambia el buscador por el chat
-  btnConsult.addEventListener("click", () => Swipe(false));
+  btnConsult.addEventListener("click", () => {
+    Swipe(false)
+    Chat(assistant[numAssistant]);
+    designChat(assistant[numAssistant])
+  });
 
   Close();
 }
-
-// prompt = `Contexto:
-// Desempeña el papel de un ${assistant[numAssistant]} experto con conocimientos en todas las especialidades.
-// Ofrece orientación y asesoramiento de manera concisa y breve, brindando soluciones específicas a la situación presentada.
-// Deduce y recomienda la mejor manera de abordar el problema.
-// No seas ambiguo.
-// Ofrece posibles diagnosticos.
-// La situación es: `;

@@ -9,11 +9,7 @@
   position: fixed;
   height: 80vh;
   width: 400px;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(100, 43, 115, 1) 0%,
-    rgba(4, 0, 4, 1) 90%
-  );
+background-color: black;
   border-radius: 10px;
   box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.45);
 }
@@ -40,6 +36,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: x-large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: white;
 }
 
 .btn-close-chat {
@@ -55,9 +56,10 @@
   transition: 0.2s;
 }
 
-.title {
-  font-size: x-large;
+.title-chat{
+  z-index: 10;
   color: white;
+  font-size: xx-large;
 }
 /* INPUT */
 .container-input-chat {
@@ -74,7 +76,6 @@
   width: 20%;
   height: 100%;
   border: none;
-  background-color: #000000;
   color: white;
   display: flex;
   align-items: center;
@@ -85,10 +86,6 @@
 .button-chat > img {
   width: 30%;
   filter: invert(1); /* Invierte los colores del SVG */
-}
-
-.btn-disabled {
-  background-color: gray;
 }
 
 .input-chat {
@@ -135,9 +132,26 @@
 }
 
 .bot-message {
-  background-color: #05a15c;
+  background-color: rgb(112, 110, 110);
   color: white;
   font-family: "Courier New", Courier, monospace;
   padding: 0.5rem;
   border-radius: 0px 15px 15px 15px;
+}
+
+/* COLORES EN BASE EL ASISTENTE */
+
+.Psicologo {
+  background-color: #00e944;
+  background-image: linear-gradient(160deg, #00e944 0%, #bdd080 100%);
+}
+
+.Abogado {
+  background-color: #e96500;
+  background-image: linear-gradient(160deg, #e96500 0%, #d0a580 100%);
+}
+
+.Medico {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
 }

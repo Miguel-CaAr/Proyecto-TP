@@ -1,5 +1,5 @@
 import { SuggestAssistant } from "../UI/suggestAssistant.js"
-import { Render } from "../UI/renderTest.js";
+import { Render } from "../UI/render.js";
 /**
  * Desestructura el arreglo con objetos
  * @param {Array} parsedObjects

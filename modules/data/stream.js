@@ -5,7 +5,7 @@ import { Decoder } from "./decoder.js";
  * @param {Object} responseBody Objeto ReadableStreamDefaultReader
  */
 export async function Stream(responseBody) {
-  const reader = responseBody.getReader(); //Se usa el metodo para obtener un lector que reciba los datos
+  const reader = await responseBody.getReader(); //Se usa el metodo para obtener un lector que reciba los datos
 
   while (true) {
     const chunk = await reader.read(); //read() realiza la lectura del dato (chunk, trozo de dato) y devuelve una promesa
