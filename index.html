@@ -6,13 +6,13 @@
     <title>Proyecto</title>
     <link rel="stylesheet" href="styles/modal.css" />
     <link rel="stylesheet" href="styles/search.css" />
+    <link rel="stylesheet" href="styles/chat.css">
   </head>
   <body>
     <main>
-      <section class="search">
-        <label class="title-search"
-          >¿Desea saber qué profesional necesita?</label
-        >
+      <!-- BUSCADOR -->
+      <section class="search"
+        <label class="title-search">¿Desea saber qué asistente profesional necesita?</label>
         <div class="container-input">
           <input
             class="input-search"
@@ -22,7 +22,7 @@
           <button class="btn-search">Buscar</button>
         </div>
       </section>
-
+      <!-- MODAL SUGERENCIA DE ASISTENTE -->
       <div class="container-modal">
         <div class="background"></div>
         <div class="modal">
@@ -31,6 +31,21 @@
           <h1 class="name-assistant"></h1>
           <button class="btn-consult">Asesorarse</button>
         </div>
+      </div>
+      <!-- CHAT CON ASISTENTE -->
+      <div class="chat chat-swipe">
+        <header class="container-header">
+          <h1 class="title"></h1>
+          <button class="btn-close-chat">❌</button>
+        </header>
+        <section class="container-response">
+        </section>
+        <section class="container-input-chat">
+          <input class="input-chat" type="text" placeholder="Mensaje" />
+          <button class="button-chat">
+            <img src="./styles/images/send.svg" alt="Icon send" />
+          </button>
+        </section>
       </div>
     </main>
     <footer>

@@ -4,14 +4,20 @@ body {
   margin: 0%;
   border: 0;
   background-color: black;
-}
-main {
-  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
+
+.search-swipe{
+  transform: translate(-50%, -100vh) !important;
+  transition: 2s;
+}
+
 .search {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  transition: 2s;
   display: flex;
   justify-content: center;
   align-items: center;

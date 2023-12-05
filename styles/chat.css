@@ -1,0 +1,143 @@
+.chat-swipe {
+  transform: translate(-50%, 100%) !important;
+  transition: 2s;
+}
+
+.chat {
+  transform: translate(-50%, -50%);
+  transition: 2s;
+  position: fixed;
+  height: 80vh;
+  width: 400px;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(100, 43, 115, 1) 0%,
+    rgba(4, 0, 4, 1) 90%
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.45);
+}
+
+.container-header {
+  border-radius: 10px 10px 0 0;
+}
+
+.button-chat {
+  border-radius: 0 0 10px 0;
+}
+
+.input-chat {
+  border-radius: 0 0 0 10px;
+}
+
+/* HEADER */
+.container-header {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 0%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-close-chat {
+  position: absolute;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-close-chat:hover {
+  transform: scale(110%);
+  transition: 0.2s;
+}
+
+.title {
+  font-size: x-large;
+  color: white;
+}
+/* INPUT */
+.container-input-chat {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.button-chat {
+  width: 20%;
+  height: 100%;
+  border: none;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-chat > img {
+  width: 30%;
+  filter: invert(1); /* Invierte los colores del SVG */
+}
+
+.btn-disabled {
+  background-color: gray;
+}
+
+.input-chat {
+  width: 80%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.input-chat:focus {
+  outline: none;
+  border: solid 1px gray;
+}
+
+/* CONTAINER CHAT */
+
+.container-response {
+  position: absolute;
+  bottom: 9%;
+  width: 100%;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1% 3%;
+  font-size: large;
+  overflow: auto;
+}
+
+.bot-message,
+.you-message {
+  margin: 5px;
+}
+
+.you-message {
+  background-color: white;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  padding: 0.5rem;
+  border-radius: 15px 0px 15px 15px;
+  word-wrap: break-word;
+}
+
+.bot-message {
+  background-color: #05a15c;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  padding: 0.5rem;
+  border-radius: 0px 15px 15px 15px;
+}

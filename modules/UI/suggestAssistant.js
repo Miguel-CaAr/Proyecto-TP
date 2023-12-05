@@ -1,4 +1,5 @@
-import { closeModal } from "./closeModal.js";
+import { Close } from "./close.js";
+import { Swipe } from "./swipe.js";
 export function SuggestAssistant(numAssistant) {
   const assistant = {
     1: "Psicologo",
@@ -7,11 +8,16 @@ export function SuggestAssistant(numAssistant) {
   };
   const containerModal = document.querySelector(".container-modal");
   containerModal.style.display = "flex";
-  const pagina = document.querySelector('.search');
-  pagina.style.filter = "blur(5px)";
+  const search = document.querySelector(".search");
+  search.style.filter = "blur(5px)";
   const nameAssistant = document.querySelector(".name-assistant");
   nameAssistant.innerText = assistant[numAssistant];
-  closeModal();
+  const btnConsult = document.querySelector(".btn-consult");
+
+  //Cambia el buscador por el chat
+  btnConsult.addEventListener("click", () => Swipe(false));
+
+  Close();
 }
 
 // prompt = `Contexto:

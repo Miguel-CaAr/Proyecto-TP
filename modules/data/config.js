@@ -1,6 +1,6 @@
 import { Stream } from "./stream.js";
 
-const API_KEY = "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";
+const API_KEY = "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";
 const URL = "https://api.openai.com/v1/chat/completions";
 
 /**
