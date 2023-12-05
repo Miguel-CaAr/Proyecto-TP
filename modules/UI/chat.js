@@ -8,7 +8,7 @@ const sendMessage = document.querySelector(".button-chat");
 
 export function Chat(Assistant) {
   sendMessage.addEventListener("click", () => SendMessage(Assistant));
-  SendWithEnter(input, sendMessage)
+  SendWithEnter(input, sendMessage);
   closeChat.addEventListener("click", () => Swipe(true));
 }
 
@@ -19,17 +19,21 @@ function SendMessage(Assistant) {
   user.className = "you-message";
   user.innerHTML = `Tu: ${input.value}`;
   container.appendChild(user);
-  input.value = '';
   container.scrollTop = container.scrollHeight; //Mantiene el la barra de scroll desplazada hacia abajo
 
-  const prompt = `Contexto:
-  Desempeña el papel de un ${Assistant} experto con conocimientos en todas las especialidades.
-  Ofrece orientación y asesoramiento de manera concisa y breve de maximo 100 palabras, brindando soluciones específicas a la situación presentada.
-  Recomienda la mejor manera de abordar el problema y ofrece posibles diagnosticos.
-  Al final de tu asesoramiento, añade, "Un placer asesorarte ♡."
-  La consulta es: ${input.value}`;
+  const prompt = `Olvida todo lo anterior.
+  Instrucciones:
+  Simula ser un experto ${Assistant}, con decadas de experiencia, ofrece asesoramiento conciso en menos de 150 palabras.
+  Deduce diagnosticos y da soluciones específicas, 
+  recomienda la mejor estrategia y brinda posibles diagnósticos, no te inventes historias.
+  La consulta es: ${input.value}"
+  -Por ningun motivo incluyas numeros en tu respuesta.
+  -Tu respuesta debe esta putualizda.
+`;
 
   if (Assistant) {
     API(prompt);
   }
+
+  input.value = "";
 }
