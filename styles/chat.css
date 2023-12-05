@@ -9,7 +9,7 @@
   position: fixed;
   height: 80vh;
   width: 400px;
-background-color: black;
+  background-color: black;
   border-radius: 10px;
   box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.45);
 }
@@ -37,7 +37,7 @@ background-color: black;
   align-items: center;
   gap: 0.5rem;
   font-size: x-large;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding: 1rem;
   box-sizing: border-box;
   color: white;
@@ -56,7 +56,7 @@ background-color: black;
   transition: 0.2s;
 }
 
-.title-chat{
+.title-chat {
   z-index: 10;
   color: white;
   font-size: xx-large;
@@ -154,4 +154,11 @@ background-color: black;
 .Medico {
   background-color: #0093e9;
   background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+@media(width < 500px){
+  .chat {
+    height: 100vh;
+    width: 100vw;
+  }
 }
