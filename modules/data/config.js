@@ -1,6 +1,7 @@
 import { Stream } from "./stream.js";
+import { HandleStatus } from "./handleStatus.js";
 
-const API_KEY = "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";
+const API_KEY = "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";
 const URL = "https://api.openai.com/v1/chat/completions";
 
 /**
@@ -20,6 +21,8 @@ export async function API(message) {
       stream: true,
     }),
   });
+  
+  HandleStatus(response.status);
   Stream(response.body); //Mandamos el cuerpo de la respuesta ser leida en un flujo de datos.
   //Aqui mandamos el status de la respuesta para verificar si da error;
 }

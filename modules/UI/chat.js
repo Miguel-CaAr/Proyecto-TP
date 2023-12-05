@@ -25,10 +25,9 @@ function SendMessage(Assistant) {
   const prompt = `Contexto:
   Desempeña el papel de un ${Assistant} experto con conocimientos en todas las especialidades.
   Ofrece orientación y asesoramiento de manera concisa y breve de maximo 100 palabras, brindando soluciones específicas a la situación presentada.
-  Deduce y recomienda la mejor manera de abordar el problema.
-  No seas ambiguo.
-  Ofrece posibles diagnosticos.
-  La situación es: ${input.value}`;
+  Recomienda la mejor manera de abordar el problema y ofrece posibles diagnosticos.
+  Al final de tu asesoramiento, añade, "Un placer asesorarte ♡."
+  La consulta es: ${input.value}`;
 
   if (Assistant) {
     API(prompt);
