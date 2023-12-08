@@ -1,3 +1,4 @@
+//AUN NO SE USA
 export function HandleStatus(status) {
   const Status = {
     "OK": 2,
