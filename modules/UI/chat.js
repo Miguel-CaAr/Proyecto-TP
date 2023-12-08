@@ -1,21 +1,27 @@
 import { Swipe } from "./swipe.js";
 import { API } from "../data/config.js";
 import { SendWithEnter } from "./sendWithEnter.js";
+import { prepareRender } from "./render.js";
 
 const closeChat = document.querySelector(".btn-close-chat");
 const input = document.querySelector(".input-chat");
 const sendMessage = document.querySelector(".button-chat");
-
-export function Chat(Assistant) {
-  sendMessage.addEventListener("click", () => SendMessage(Assistant));
-  SendWithEnter(input, sendMessage);
-  closeChat.addEventListener("click", () => Swipe(true));
-}
-
 const container = document.querySelector(".container-response");
 
-function SendMessage(Assistant) {
-  if(container.childElementCount > 0){
+let assistant;
+
+export function Chat(selectedAssistant) {
+  SendWithEnter(input, sendMessage);
+  assistant = selectedAssistant;
+}
+
+sendMessage.addEventListener("click", () => SendMessage(assistant));
+closeChat.addEventListener("click", () => Swipe(true));
+
+function SendMessage(assistant) {
+  prepareRender(true);
+
+  if (container.childElementCount > 0) {
     container.remove(user);
   }
   const user = document.createElement("p");
@@ -27,7 +33,7 @@ function SendMessage(Assistant) {
   const prompt = `Olvida todo lo anterior.
   -Por ningun motivo incluyas numeros en tu respuesta.
   Instrucciones:
-  Simula ser un experto ${Assistant}, con decadas de experiencia, ofrece asesoramiento conciso en menos de 150 palabras.
+  Simula ser un experto ${assistant}, con decadas de experiencia, ofrece asesoramiento conciso en menos de 150 palabras.
   Deduce diagnosticos y da soluciones específicas, 
   recomienda la mejor estrategia y brinda posibles diagnósticos, no te inventes historias.
   La consulta es: ${input.value}"
@@ -35,7 +41,7 @@ function SendMessage(Assistant) {
   -Tu respuesta debe esta putualizda.
 `;
 
-  if (Assistant) {
+  if (assistant) {
     API(prompt);
   }
 }

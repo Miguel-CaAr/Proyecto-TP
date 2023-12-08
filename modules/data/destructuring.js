@@ -1,4 +1,4 @@
-import { SuggestAssistant } from "../UI/suggestAssistant.js"
+import { SuggestAssistant } from "../UI/suggestAssistant.js";
 import { Render } from "../UI/render.js";
 /**
  * Desestructura el arreglo con objetos

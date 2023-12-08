@@ -1,19 +1,17 @@
 const renderResponse = document.createElement("h5");
 renderResponse.className = "bot-message";
 const container = document.querySelector(".container-response");
-const btnSendMessage = document.querySelector(".button-chat");
 const input = document.querySelector(".input-chat");
 
-btnSendMessage.addEventListener("click", () => {
+export function prepareRender() {
   container.innerHTML = "";
   renderResponse.innerHTML = "";
-});
+}
 
 export function Render(content) {
   renderResponse.innerText += content;
   container.appendChild(renderResponse);
   container.scrollTop = container.scrollHeight;
-  
 
   input.value = "";
 }

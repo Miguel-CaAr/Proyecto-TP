@@ -15,5 +15,4 @@ export function Swipe(isChat) {
     chat.classList.remove("chat-swipe");
     container.innerHTML = "";
   }
-  Close();
 }
