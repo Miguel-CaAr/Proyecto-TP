@@ -1,5 +1,5 @@
 import { SuggestAssistant } from "../UI/suggestAssistant.js";
-import { Render } from "../UI/render.js";
+import { RenderMessageAssistant } from "../UI/render.js";
 /**
  * Desestructura el arreglo con objetos
  * @param {Array} parsedObjects
@@ -19,7 +19,7 @@ export function Destructuring(parsedObjects) {
           SuggestAssistant(content);
           break;
         default:
-          Render(content);
+          RenderMessageAssistant(content);
           break;
       }
     }
